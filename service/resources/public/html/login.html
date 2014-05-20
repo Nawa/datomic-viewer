@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+  <head lang="ru">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/site.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,700,400italic,600italic,700italic,800italic,300italic" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="/js/site.min.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript" src="/js/main.js" charset="utf-8"></script>
+    <div class="container">
+      <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-8">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Datomic viewer</a>
+          </div>
+        </div>
+      </nav>
+      <div id="main-alert" class="alert alert-danger alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <div id="alert-content">
+          Stub content
+        </div>
+      </div>
+      <div class="form-horizontal">
+        <fieldset>
+
+        <!-- Form Name -->
+        <legend>Connection settings</legend>
+
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="uri">URI</label>
+          <div class="col-md-4">
+          <input id="uri" name="uri" type="text" placeholder="datomic:free://localhost:4334/dbname" class="form-control input-md" required="">
+
+          </div>
+        </div>
+
+        <!-- Button -->        
+          <button id="login-button" href="#" class="btn btn-primary ladda-button center-block" data-style="expand-right" onClick="client.core.try_login(this)"><span class="ladda-label">Connect</span></button>
+        </fieldset>
+        </div>
+    </div>
+  </body>
+</html>
