@@ -39856,117 +39856,113 @@ goog.require("enfocus.events");
 goog.require("enfocus.events");
 goog.require("enfocus.core");
 goog.require("enfocus.core");
-enfocus.core.load_remote_dom.call(null, "/html/login.html", "remote/html/login.html", "en5555_");
+enfocus.core.load_remote_dom.call(null, "/html/login.html", "remote/html/login.html", "en5581_");
 if (cljs.core.deref.call(null, enfocus.core.tpl_cache).call(null, "remote/html/login.html") == null) {
   cljs.core.swap_BANG_.call(null, enfocus.core.tpl_cache, cljs.core.assoc, "remote/html/login.html", new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["", "NOT_LOADED"], null));
 } else {
 }
 client.core.login_navbar = function login_navbar() {
-  var vec__7978 = function() {
+  var vec__8308 = function() {
     return enfocus.core.get_cached_snippet.call(null, "remote/html/login.html", ".navbar");
   }.call(null);
-  var id_sym7975 = cljs.core.nth.call(null, vec__7978, 0, null);
-  var pnod7976 = cljs.core.nth.call(null, vec__7978, 1, null);
-  var pnod7976__$1 = enfocus.core.create_hidden_dom.call(null, pnod7976);
-  enfocus.core.i_at.call(null, id_sym7975, pnod7976__$1);
-  enfocus.core.reset_ids.call(null, id_sym7975, pnod7976__$1);
-  return enfocus.core.remove_node_return_child.call(null, pnod7976__$1);
+  var id_sym8305 = cljs.core.nth.call(null, vec__8308, 0, null);
+  var pnod8306 = cljs.core.nth.call(null, vec__8308, 1, null);
+  var pnod8306__$1 = enfocus.core.create_hidden_dom.call(null, pnod8306);
+  enfocus.core.i_at.call(null, id_sym8305, pnod8306__$1);
+  enfocus.core.reset_ids.call(null, id_sym8305, pnod8306__$1);
+  return enfocus.core.remove_node_return_child.call(null, pnod8306__$1);
 };
-enfocus.core.load_remote_dom.call(null, "/html/login.html", "remote/html/login.html", "en5555_");
+enfocus.core.load_remote_dom.call(null, "/html/login.html", "remote/html/login.html", "en5581_");
 if (cljs.core.deref.call(null, enfocus.core.tpl_cache).call(null, "remote/html/login.html") == null) {
   cljs.core.swap_BANG_.call(null, enfocus.core.tpl_cache, cljs.core.assoc, "remote/html/login.html", new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["", "NOT_LOADED"], null));
 } else {
 }
 client.core.login_form = function login_form() {
-  var vec__7982 = function() {
+  var vec__8312 = function() {
     return enfocus.core.get_cached_snippet.call(null, "remote/html/login.html", ".form-horizontal");
   }.call(null);
-  var id_sym7979 = cljs.core.nth.call(null, vec__7982, 0, null);
-  var pnod7980 = cljs.core.nth.call(null, vec__7982, 1, null);
-  var pnod7980__$1 = enfocus.core.create_hidden_dom.call(null, pnod7980);
-  enfocus.core.i_at.call(null, id_sym7979, pnod7980__$1);
-  enfocus.core.reset_ids.call(null, id_sym7979, pnod7980__$1);
-  return enfocus.core.remove_node_return_child.call(null, pnod7980__$1);
+  var id_sym8309 = cljs.core.nth.call(null, vec__8312, 0, null);
+  var pnod8310 = cljs.core.nth.call(null, vec__8312, 1, null);
+  var pnod8310__$1 = enfocus.core.create_hidden_dom.call(null, pnod8310);
+  enfocus.core.i_at.call(null, id_sym8309, pnod8310__$1);
+  enfocus.core.reset_ids.call(null, id_sym8309, pnod8310__$1);
+  return enfocus.core.remove_node_return_child.call(null, pnod8310__$1);
 };
-enfocus.core.load_remote_dom.call(null, "/html/login.html", "remote/html/login.html", "en5555_");
+enfocus.core.load_remote_dom.call(null, "/html/login.html", "remote/html/login.html", "en5581_");
 if (cljs.core.deref.call(null, enfocus.core.tpl_cache).call(null, "remote/html/login.html") == null) {
   cljs.core.swap_BANG_.call(null, enfocus.core.tpl_cache, cljs.core.assoc, "remote/html/login.html", new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["", "NOT_LOADED"], null));
 } else {
 }
 client.core.alert = function alert__$1() {
-  var vec__7986 = function() {
+  var vec__8316 = function() {
     return enfocus.core.get_cached_snippet.call(null, "remote/html/login.html", "#main-alert");
   }.call(null);
-  var id_sym7983 = cljs.core.nth.call(null, vec__7986, 0, null);
-  var pnod7984 = cljs.core.nth.call(null, vec__7986, 1, null);
-  var pnod7984__$1 = enfocus.core.create_hidden_dom.call(null, pnod7984);
-  enfocus.core.i_at.call(null, id_sym7983, pnod7984__$1);
-  enfocus.core.reset_ids.call(null, id_sym7983, pnod7984__$1);
-  return enfocus.core.remove_node_return_child.call(null, pnod7984__$1);
+  var id_sym8313 = cljs.core.nth.call(null, vec__8316, 0, null);
+  var pnod8314 = cljs.core.nth.call(null, vec__8316, 1, null);
+  var pnod8314__$1 = enfocus.core.create_hidden_dom.call(null, pnod8314);
+  enfocus.core.i_at.call(null, id_sym8313, pnod8314__$1);
+  enfocus.core.reset_ids.call(null, id_sym8313, pnod8314__$1);
+  return enfocus.core.remove_node_return_child.call(null, pnod8314__$1);
 };
-enfocus.core.load_remote_dom.call(null, "/html/schema.html", "remote/html/schema.html", "en5748_");
+enfocus.core.load_remote_dom.call(null, "/html/schema.html", "remote/html/schema.html", "en5594_");
 if (cljs.core.deref.call(null, enfocus.core.tpl_cache).call(null, "remote/html/schema.html") == null) {
   cljs.core.swap_BANG_.call(null, enfocus.core.tpl_cache, cljs.core.assoc, "remote/html/schema.html", new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["", "NOT_LOADED"], null));
 } else {
 }
 client.core.logged_navbar = function logged_navbar() {
-  var vec__7990 = function() {
+  var vec__8320 = function() {
     return enfocus.core.get_cached_snippet.call(null, "remote/html/schema.html", ".navbar");
   }.call(null);
-  var id_sym7987 = cljs.core.nth.call(null, vec__7990, 0, null);
-  var pnod7988 = cljs.core.nth.call(null, vec__7990, 1, null);
-  var pnod7988__$1 = enfocus.core.create_hidden_dom.call(null, pnod7988);
-  enfocus.core.i_at.call(null, id_sym7987, pnod7988__$1);
-  enfocus.core.reset_ids.call(null, id_sym7987, pnod7988__$1);
-  return enfocus.core.remove_node_return_child.call(null, pnod7988__$1);
+  var id_sym8317 = cljs.core.nth.call(null, vec__8320, 0, null);
+  var pnod8318 = cljs.core.nth.call(null, vec__8320, 1, null);
+  var pnod8318__$1 = enfocus.core.create_hidden_dom.call(null, pnod8318);
+  enfocus.core.i_at.call(null, id_sym8317, pnod8318__$1);
+  enfocus.core.reset_ids.call(null, id_sym8317, pnod8318__$1);
+  return enfocus.core.remove_node_return_child.call(null, pnod8318__$1);
 };
-enfocus.core.load_remote_dom.call(null, "/html/schema.html", "remote/html/schema.html", "en5748_");
+enfocus.core.load_remote_dom.call(null, "/html/schema.html", "remote/html/schema.html", "en5594_");
 if (cljs.core.deref.call(null, enfocus.core.tpl_cache).call(null, "remote/html/schema.html") == null) {
   cljs.core.swap_BANG_.call(null, enfocus.core.tpl_cache, cljs.core.assoc, "remote/html/schema.html", new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["", "NOT_LOADED"], null));
 } else {
 }
-client.core.schema_attribute_create = function schema_attribute_create() {
-  var vec__7994 = function() {
+client.core.schema_attribute_create_form = function schema_attribute_create_form() {
+  var vec__8324 = function() {
     return enfocus.core.get_cached_snippet.call(null, "remote/html/schema.html", "#schema-attribute-create");
   }.call(null);
-  var id_sym7991 = cljs.core.nth.call(null, vec__7994, 0, null);
-  var pnod7992 = cljs.core.nth.call(null, vec__7994, 1, null);
-  var pnod7992__$1 = enfocus.core.create_hidden_dom.call(null, pnod7992);
-  enfocus.core.i_at.call(null, id_sym7991, pnod7992__$1);
-  enfocus.core.reset_ids.call(null, id_sym7991, pnod7992__$1);
-  return enfocus.core.remove_node_return_child.call(null, pnod7992__$1);
+  var id_sym8321 = cljs.core.nth.call(null, vec__8324, 0, null);
+  var pnod8322 = cljs.core.nth.call(null, vec__8324, 1, null);
+  var pnod8322__$1 = enfocus.core.create_hidden_dom.call(null, pnod8322);
+  enfocus.core.i_at.call(null, id_sym8321, pnod8322__$1, "#schema-attribute-create", enfocus.core.set_style.call(null, new cljs.core.Keyword(null, "display", "display", 2685668404), "none"));
+  enfocus.core.reset_ids.call(null, id_sym8321, pnod8322__$1);
+  return enfocus.core.remove_node_return_child.call(null, pnod8322__$1);
 };
-enfocus.core.load_remote_dom.call(null, "/html/schema.html", "remote/html/schema.html", "en5748_");
+enfocus.core.load_remote_dom.call(null, "/html/schema.html", "remote/html/schema.html", "en5594_");
 if (cljs.core.deref.call(null, enfocus.core.tpl_cache).call(null, "remote/html/schema.html") == null) {
   cljs.core.swap_BANG_.call(null, enfocus.core.tpl_cache, cljs.core.assoc, "remote/html/schema.html", new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["", "NOT_LOADED"], null));
 } else {
 }
 client.core.schema_view = function schema_view() {
-  var vec__7998 = function() {
+  var vec__8328 = function() {
     return enfocus.core.get_cached_snippet.call(null, "remote/html/schema.html", "#schema-view");
   }.call(null);
-  var id_sym7995 = cljs.core.nth.call(null, vec__7998, 0, null);
-  var pnod7996 = cljs.core.nth.call(null, vec__7998, 1, null);
-  var pnod7996__$1 = enfocus.core.create_hidden_dom.call(null, pnod7996);
-  enfocus.core.i_at.call(null, id_sym7995, pnod7996__$1, "#add-new-attr-btn", enfocus.events.listen.call(null, new cljs.core.Keyword(null, "click", "click", 1108654330), function(vec__7998, id_sym7995, pnod7996, pnod7996__$1) {
-    return function() {
-      return $("#schema-attribute-create").slideToggle(300);
-    };
-  }(vec__7998, id_sym7995, pnod7996, pnod7996__$1)));
-  enfocus.core.reset_ids.call(null, id_sym7995, pnod7996__$1);
-  return enfocus.core.remove_node_return_child.call(null, pnod7996__$1);
+  var id_sym8325 = cljs.core.nth.call(null, vec__8328, 0, null);
+  var pnod8326 = cljs.core.nth.call(null, vec__8328, 1, null);
+  var pnod8326__$1 = enfocus.core.create_hidden_dom.call(null, pnod8326);
+  enfocus.core.i_at.call(null, id_sym8325, pnod8326__$1, "#add-new-attr-btn", enfocus.events.listen.call(null, new cljs.core.Keyword(null, "click", "click", 1108654330), client.core.show_schema_attribute_create_form));
+  enfocus.core.reset_ids.call(null, id_sym8325, pnod8326__$1);
+  return enfocus.core.remove_node_return_child.call(null, pnod8326__$1);
 };
-client.core.error_handler = function error_handler(p__7999) {
-  var map__8001 = p__7999;
-  var map__8001__$1 = cljs.core.seq_QMARK_.call(null, map__8001) ? cljs.core.apply.call(null, cljs.core.hash_map, map__8001) : map__8001;
-  var status_text = cljs.core.get.call(null, map__8001__$1, new cljs.core.Keyword(null, "status-text", "status-text", 4371493274));
-  var status = cljs.core.get.call(null, map__8001__$1, new cljs.core.Keyword(null, "status", "status", 4416389988));
+client.core.error_handler = function error_handler(p__8329) {
+  var map__8331 = p__8329;
+  var map__8331__$1 = cljs.core.seq_QMARK_.call(null, map__8331) ? cljs.core.apply.call(null, cljs.core.hash_map, map__8331) : map__8331;
+  var status_text = cljs.core.get.call(null, map__8331__$1, new cljs.core.Keyword(null, "status-text", "status-text", 4371493274));
+  var status = cljs.core.get.call(null, map__8331__$1, new cljs.core.Keyword(null, "status", "status", 4416389988));
   return console.log([cljs.core.str("Something bad happened: "), cljs.core.str(status), cljs.core.str(" "), cljs.core.str(status_text)].join(""));
 };
-client.core.alert_error_handler = function alert_error_handler(p__8002) {
-  var map__8004 = p__8002;
-  var map__8004__$1 = cljs.core.seq_QMARK_.call(null, map__8004) ? cljs.core.apply.call(null, cljs.core.hash_map, map__8004) : map__8004;
-  var response = cljs.core.get.call(null, map__8004__$1, new cljs.core.Keyword(null, "response", "response", 673580979));
+client.core.alert_error_handler = function alert_error_handler(p__8332) {
+  var map__8334 = p__8332;
+  var map__8334__$1 = cljs.core.seq_QMARK_.call(null, map__8334) ? cljs.core.apply.call(null, cljs.core.hash_map, map__8334) : map__8334;
+  var response = cljs.core.get.call(null, map__8334__$1, new cljs.core.Keyword(null, "response", "response", 673580979));
   if (!client.utils.exists_QMARK_.call(null, "#main-alert")) {
     enfocus.core.at.call(null, ".navbar", enfocus.core.after.call(null, client.core.alert.call(null)));
   } else {
@@ -39986,17 +39982,17 @@ client.core.show_login_page = function show_login_page() {
   return enfocus.core.at.call(null, "#main-container", enfocus.core.append.call(null, client.core.login_form.call(null)));
 };
 client.core.try_login_success_handler = function try_login_success_handler(response) {
-  var button_8005 = $("#login-button").get(0);
-  var ladda_8006 = button_8005.ladda;
-  ladda_8006.stop();
-  button_8005.ladda = null;
+  var button_8335 = $("#login-button").get(0);
+  var ladda_8336 = button_8335.ladda;
+  ladda_8336.stop();
+  button_8335.ladda = null;
   return client.core.show_index_depends_uri.call(null, response);
 };
 client.core.try_login_error_handler = function try_login_error_handler(response) {
-  var button_8007 = $("#login-button").get(0);
-  var ladda_8008 = button_8007.ladda;
-  ladda_8008.stop();
-  button_8007.ladda = null;
+  var button_8337 = $("#login-button").get(0);
+  var ladda_8338 = button_8337.ladda;
+  ladda_8338.stop();
+  button_8337.ladda = null;
   return client.core.alert_error_handler.call(null, response);
 };
 client.core.try_login = function try_login(button) {
@@ -40008,13 +40004,34 @@ client.core.try_login = function try_login(button) {
 };
 goog.exportSymbol("client.core.try_login", client.core.try_login);
 client.core.show_logged_page = function show_logged_page(uri) {
-  enfocus.core.at.call(null, "#main-container", enfocus.core.content.call(null, ""));
-  enfocus.core.at.call(null, "#main-container", enfocus.core.append.call(null, client.core.logged_navbar.call(null)));
-  enfocus.core.at.call(null, "#main-container", enfocus.core.append.call(null, client.core.schema_attribute_create.call(null)));
+  enfocus.core.at.call(null, "#main-container", enfocus.core.do__GT_.call(null, enfocus.core.content.call(null, ""), enfocus.core.append.call(null, client.core.logged_navbar.call(null)), enfocus.core.append.call(null, client.core.schema_attribute_create_form.call(null))));
+  client.core.init_listeners_schema_attribute_create_form.call(null);
+  $(".checkbox input").iCheck({checkboxClass:"icheckbox_flat", increaseArea:"20%"});
+  $(".radio input").iCheck({radioClass:"iradio_flat", increaseArea:"20%"});
   DatomicViewer.createCodeMirror("#schema-attribute-create-textarea");
   enfocus.core.at.call(null, "#main-container", enfocus.core.append.call(null, client.core.schema_view.call(null)));
-  DatomicViewer.createCodeMirror("#schema-view-textarea", eval("({readOnly: true})"));
+  DatomicViewer.createCodeMirror("#schema-view-textarea", {readOnly:true});
   return client.core.try_load_schema_overall.call(null);
+};
+client.core.show_schema_attribute_create_form = function show_schema_attribute_create_form(event) {
+  $("#schema-attribute-create").slideToggle(300);
+  return $("#schema-attribute-create-textarea").data("codemirror").refresh();
+};
+client.core.init_listeners_schema_attribute_create_form = function init_listeners_schema_attribute_create_form() {
+  enfocus.core.at.call(null, "#ident", enfocus.events.listen.call(null, new cljs.core.Keyword(null, "keyup", "keyup", 1115849900), client.core.schema_attribute_create_textarea));
+  enfocus.core.at.call(null, "#valueType", enfocus.events.listen.call(null, new cljs.core.Keyword(null, "change", "change", 3947235106), client.core.schema_attribute_create_textarea));
+  $("input[name\x3d'cardinality']").on("ifChanged", function() {
+    return client.core.schema_attribute_create_textarea.call(null);
+  });
+  return $("input[name\x3d'isComponent']").on("ifChanged", function() {
+    return client.core.schema_attribute_create_textarea.call(null);
+  });
+};
+client.core.schema_attribute_create_textarea = function schema_attribute_create_textarea() {
+  var values = enfocus.core.from.call(null, "#schema-attribute-create form", enfocus.core.read_form.call(null));
+  var res = [cljs.core.str("[{:db/ident        "), cljs.core.str((new cljs.core.Keyword(null, "ident", "ident", 1113953634)).cljs$core$IFn$_invoke$arity$1(values)), cljs.core.str("\n"), cljs.core.str("  :db/valueType    "), cljs.core.str((new cljs.core.Keyword(null, "valueType", "valueType", 4543178685)).cljs$core$IFn$_invoke$arity$1(values)), cljs.core.str("\n"), cljs.core.str("  :db/cardinality  "), cljs.core.str((new cljs.core.Keyword(null, "cardinality", "cardinality", 1859117312)).cljs$core$IFn$_invoke$arity$1(values)), 
+  cljs.core.str("\n"), cljs.core.str((new cljs.core.Keyword(null, "isComponent", "isComponent", 792416869)).cljs$core$IFn$_invoke$arity$1(values) == null ? "" : "  :db/isComponent  true\n"), cljs.core.str("  :db/id           (d/tempid :db.part/db)\n"), cljs.core.str("  :db.install/_attribute :db.part/db}]")].join("");
+  return $("#schema-attribute-create-textarea").data("codemirror").setValue(res);
 };
 client.core.try_load_schema_overall = function try_load_schema_overall() {
   return ajax.core.GET.call(null, "/service/schema", new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "handler", "handler", 1706707644), client.core.try_load_schema_overall_handler, new cljs.core.Keyword(null, "error-handler", "error-handler", 1866823671), client.core.error_handler], null));
