@@ -21,8 +21,24 @@
 
 (defn set-uri [uri session]
   (try
-    (datomic/connect-to-datomic uri)
+    (datomic/check-uri uri)
     (response-with-changed-session uri (assoc session :uri uri))
+    (catch Exception e
+      (response (.getMessage e) 500))))
+
+(defn schema-new-attribute-params []
+  {:db/valueType '(":db.type/keyword"  ":db.type/string"  ":db.type/boolean"
+                   ":db.type/long"     ":db.type/bigint"  ":db.type/float"
+                   ":db.type/double"   ":db.type/bigdec"  ":db.type/ref"
+                   ":db.type/instant"  ":db.type/uuid"    ":db.type/uri"
+                   ":db.type/bytes")
+   :db.install/_attribute ":db.part/db"
+   :db/id "(d/tempid :db.part/db)"})
+
+(defn schema-new-attribute-create [uri attribute]
+  (try
+    (datomic/create-schema-attribute uri attribute)
+    (response "Attribute successfully created")
     (catch Exception e
       (response (.getMessage e) 500))))
 
@@ -32,6 +48,10 @@
 (defroutes service-routes
   (GET "/uri" request (response (:uri (:session request))))
   (POST "/uri" {params :params session :session} (set-uri (:value params) session))
+  (GET "/schema/new-attribute/params" [] (response (schema-new-attribute-params)))
+  (POST "/schema/new-attribute/create"
+        {params :params session :session}
+        (schema-new-attribute-create (:uri session) (:value params)))
   (GET "/schema" request (response (datomic/get-schema (:uri (:session request))))))
 
 (defroutes compojure-handler

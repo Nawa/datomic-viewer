@@ -3,22 +3,29 @@
    [datomic.api :as d]
    [clojure.edn :as edn]
    [clojure.java.io :as io]
-   [service.utils :as utils])
+   [service.utils :as utils]
+   [clojure.edn :as edn])
   (:use clojure.pprint))
 
-
-(defn connect-to-datomic [uri]
+(defn ^:private connect-to-datomic [uri]
   (d/create-database uri)
-  (let [conn (d/connect uri)]
-    (fn [] (d/db conn))))
+  (d/connect uri))
+
+(defn ^:private db [uri]
+  (fn [] (d/db (connect-to-datomic uri))))
+
+(defn check-uri [uri]
+  ((db uri)))
 
 (defn get-schema [uri]
-  (let [db (connect-to-datomic uri)]
-    (->> (d/q '[:find ?e
-           :where [?e :db/valueType]]
-              (db))
-         (map #(d/touch (d/entity (db) (first %))))
-         (utils/prettify))))
+  (->> (d/q '[:find ?e
+              :where [?e :db/valueType]]
+            ((db uri)))
+         (map #(d/touch (d/entity ((db uri)) (first %))))
+         (utils/prettify)))
+
+(defn create-schema-attribute [uri attribute]
+  @(d/transact (connect-to-datomic uri) (edn/read-string attribute)))
 
 
 ;;   (utils/prettify '({:key1 1 :key2 2}

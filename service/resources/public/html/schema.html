@@ -31,7 +31,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Datomic viewer</a>
+            <a class="navbar-brand" href="/">Datomic viewer</a>
           </div>
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Schema</a></li>
@@ -52,7 +52,7 @@
         <form class="form-horizontal">
           <fieldset>
             <!-- Form Name -->
-            <legend>Add new attribute</legend>
+            <legend>Add new attribute<a class="pull-right" href="http://docs.datomic.com/schema.html" target="_blank">see more info</a></legend>
             <!-- Text input-->
             <div class="form-group">
               <label class="col-md-4 control-label" for="ident">Id</label>
@@ -66,8 +66,6 @@
               <label class="col-md-4 control-label" for="valueType">Value type</label>
               <div class="col-md-4">
                 <select id="valueType" name="valueType" class="form-control">
-                  <option value="Option one">Option one</option>
-                  <option value="Option two">Option two</option>
                 </select>
                 <span class="help-block">:db/valueType</span>
               </div>
@@ -78,14 +76,14 @@
               <div class="col-md-4">
                 <div class="radio">
                   <label for="radios-0">
-                    <input type="radio" name="cardinality" id="radios-0" value="Option one" checked="checked">
-                    Option one
+                    <input type="radio" name="cardinality" id="radios-0" value=":db.cardinality/one" checked="checked">
+                      :db.cardinality/one
                   </label>
                 </div>
                 <div class="radio">
                   <label for="radios-1">
-                    <input type="radio" name="cardinality" id="radios-1" value="Option two">
-                    Option two
+                    <input type="radio" name="cardinality" id="radios-1" value=":db.cardinality/many">
+                    :db.cardinality/many
                   </label>
                 </div>
                 <span class="help-block">:db/cardinality</span>
@@ -107,10 +105,17 @@
             <div class="form-group">
               <div class="col-md-6 col-md-offset-2">
                 <textarea class="form-control" id="schema-attribute-create-textarea" name="schema-attribute-create-textarea">
-(defn f
-  (pprint "Hello world!"))
+[{:db/ident        :some_type
+  :db/valueType    :db.type/string
+  :db/cardinality  :db.cardinality/one
+  :db/id           (d/tempid :db.part/db)
+  :db.install/_attribute :db.part/db}]
                 </textarea>
               </div>
+            </div>
+            <div style="text-align:center">
+              <a id="send-schema-new-attribute-create" class="btn btn-primary ladda-button" data-style="expand-right" onClick="client.core.
+              try_send_schema_new_attribute_create(this)"><span class="ladda-label">Create</span></a>
             </div>
           </fieldset>
         </form>

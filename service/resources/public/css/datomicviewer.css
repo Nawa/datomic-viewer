@@ -1,3 +1,16 @@
 .help-block{
 	margin-bottom : 0px;
 }
+
+.navbar-brand{
+	background-image: url("/img/datomic.png");
+	padding-left: 70px;
+	background-repeat: no-repeat;
+	margin-left: 50px !important;
+	background-position: 0 5px;
+}
+
+legend a{
+	font-size :16px;
+}
+

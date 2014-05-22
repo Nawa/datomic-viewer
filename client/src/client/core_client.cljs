@@ -2,7 +2,8 @@
   (:require [enfocus.core :as ef]
             [enfocus.events :as events :refer (listen)]
             [ajax.core :refer [GET POST]]
-            [client.utils :as utils])
+            [client.utils :as utils]
+            [client.ladda :as ladda])
   (:require-macros [enfocus.macros :as em]))
 
 ;;;;;;;;;;;;;;;;;;;
@@ -46,35 +47,31 @@
   (ef/at "#main-container" (ef/append (login-form))))
 
 (defn try-login-success-handler [response]
-  (let [button (.get (js/$ "#login-button") 0)
-        ladda (.-ladda button)]
-    (.stop ladda)
-    (set! (.-ladda button) nil))
+  (ladda/stop "#login-button")
   (show-index-depends-uri response))
 
 (defn try-login-error-handler [response]
-  (let [button (.get (js/$ "#login-button") 0)
-        ladda (.-ladda button)]
-    (.stop ladda)
-    (set! (.-ladda button) nil))
+  (ladda/stop "#login-button")
   (alert-error-handler response))
 
 (defn ^:export try-login [button]
-  (let [ladda (js/Ladda.create button)]
-    (.start ladda)
-    (set! (.-ladda (.get (js/$ "#login-button") 0)) ladda)
-    (POST "/service/uri"
+  (ladda/start button)
+  (POST "/service/uri"
        {:params {:value (ef/from "#uri" (ef/read-form-input))}
         :handler try-login-success-handler
-        :error-handler try-login-error-handler})))
+        :error-handler try-login-error-handler}))
 
 ;;;;;;;;;;;;;;;;;;;
 ;; logged
 ;;;;;;;;;;;;;;;;;;;
+
+(def new-attribute-params (atom {}))
+
 (defn show-logged-page [uri]
   (ef/at "#main-container" (ef/do-> (ef/content "")
                                     (ef/append (logged-navbar))
                                     (ef/append (schema-attribute-create-form))))
+  (define-new-attribute-params)
   (init-listeners-schema-attribute-create-form)
   (.iCheck (js/$ ".checkbox input") (js* "{checkboxClass: 'icheckbox_flat', increaseArea: '20%'}"))
   (.iCheck (js/$ ".radio input") (js* "{radioClass: 'iradio_flat', increaseArea: '20%'}"))
@@ -87,19 +84,17 @@
   (.slideToggle (js/$ "#schema-attribute-create") 300)
   (.refresh (.data (js/$ "#schema-attribute-create-textarea") "codemirror")))
 
-;;      :db/ident        :series
-;;      :db/valueType    :db.type/ref
-;;      :db/cardinality  :db.cardinality/many
-;;      :db/isComponent  true
-;;      :db/id           (d/tempid :db.part/db)
-;;      :db.install/_attribute :db.part/db
 (defn init-listeners-schema-attribute-create-form []
-  (ef/at "#ident" (events/listen :keyup schema-attribute-create-textarea))
-  (ef/at "#valueType" (events/listen :change schema-attribute-create-textarea))
-  (.on (js/$ "input[name='cardinality']") "ifChanged" #(schema-attribute-create-textarea))
-  (.on (js/$ "input[name='isComponent']") "ifChanged" #(schema-attribute-create-textarea)))
+  (ef/at "#ident" (events/listen :keyup schema-attribute-create-textarea-update))
+  (ef/at "#valueType" (events/listen :change schema-attribute-create-textarea-update))
+  (.on (js/$ "input[name='cardinality']") "ifChanged" #(schema-attribute-create-textarea-update))
+  (.on (js/$ "input[name='isComponent']") "ifChanged" #(schema-attribute-create-textarea-update)))
 
-(defn schema-attribute-create-textarea []
+(defn fill-schema-attribute-create-form []
+  (ef/at "#valueType" (ef/content ""))
+  (map #(ef/at "#valueType" (ef/append (str "<option value='" % "'>" % "</option>"))) (:db/valueType @new-attribute-params)))
+
+(defn schema-attribute-create-textarea-update []
   (let [values (ef/from "#schema-attribute-create form" (ef/read-form))
         res (str
              "[{:db/ident        " (:ident values) "\n"
@@ -111,6 +106,28 @@
              "  :db/id           (d/tempid :db.part/db)\n"
              "  :db.install/_attribute :db.part/db}]")]
     (.setValue (.data (js/$ "#schema-attribute-create-textarea") "codemirror") res)))
+
+(defn try-send-schema-new-attribute-create-success-handler [response]
+  (ladda/stop "#send-schema-new-attribute-create")
+  (try-load-schema-overall))
+
+(defn try-send-schema-new-attribute-create-error-handler [response]
+  (ladda/stop "#send-schema-new-attribute-create")
+  (alert-error-handler response))
+
+(defn ^:export try-send-schema-new-attribute-create [button]
+  (ladda/start button)
+  (POST "/service/schema/new-attribute/create"
+       {:params {:value (.getValue (.data (js/$ "#schema-attribute-create-textarea") "codemirror"))}
+        :handler try-send-schema-new-attribute-create-success-handler
+        :error-handler try-send-schema-new-attribute-create-error-handler}))
+
+(defn define-new-attribute-params []
+  (GET "/service/schema/new-attribute/params"
+       {:handler (fn [params](
+                              (swap! new-attribute-params (fn [prev] params))
+                              (fill-schema-attribute-create-form)))
+        :error-handler error-handler}))
 
 (defn try-load-schema-overall []
   (GET "/service/schema"
@@ -130,12 +147,5 @@
   (GET "/service/uri"
        {:handler show-index-depends-uri
         :error-handler error-handler}))
-
-;; (defn start []
-;;   (ef/at ".container"
-;;          (ef/do-> (ef/content (blog-header))
-;;                   (ef/append (blog-content))
-;;                   (ef/append (blog-sidebar))))
-;;   (try-load-articles))
 
 (set! (.-onload js/window) #(em/wait-for-load (start)))
