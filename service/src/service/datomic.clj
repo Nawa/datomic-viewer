@@ -24,8 +24,19 @@
          (map #(d/touch (d/entity ((db uri)) (first %))))
          (utils/prettify)))
 
+;; (defn create-schema-attribute [uri attribute]
+;;   (let [prepared-attribute (map #(assoc % :db/id
+;;                                    (let [id (:db/id %)]
+;;                                      (if (list? id)
+;;                                        (do
+;;                                          (binding [*ns* 'service.datomic]
+;;                                            (eval id)))
+;;                                        id))) (edn/read-string attribute))]
+;;     @(d/transact (connect-to-datomic uri)  prepared-attribute)))
+
 (defn create-schema-attribute [uri attribute]
-  @(d/transact (connect-to-datomic uri) (edn/read-string attribute)))
+  (let [prepared-attribute (map #(assoc % :db/id (d/tempid :db.part/db)) (edn/read-string attribute))]
+    @(d/transact (connect-to-datomic uri)  prepared-attribute)))
 
 
 ;;   (utils/prettify '({:key1 1 :key2 2}

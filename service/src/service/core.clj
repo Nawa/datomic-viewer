@@ -24,6 +24,7 @@
     (datomic/check-uri uri)
     (response-with-changed-session uri (assoc session :uri uri))
     (catch Exception e
+      (.printStackTrace e)
       (response (.getMessage e) 500))))
 
 (defn schema-new-attribute-params []
@@ -40,6 +41,7 @@
     (datomic/create-schema-attribute uri attribute)
     (response "Attribute successfully created")
     (catch Exception e
+      (.printStackTrace e)
       (response (.getMessage e) 500))))
 
 (defn logout [session]

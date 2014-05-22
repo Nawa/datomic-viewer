@@ -39889,15 +39889,15 @@ if (cljs.core.deref.call(null, enfocus.core.tpl_cache).call(null, "remote/html/l
 } else {
 }
 client.core.login_navbar = function login_navbar() {
-  var vec__5743 = function() {
+  var vec__5836 = function() {
     return enfocus.core.get_cached_snippet.call(null, "remote/html/login.html", ".navbar");
   }.call(null);
-  var id_sym5740 = cljs.core.nth.call(null, vec__5743, 0, null);
-  var pnod5741 = cljs.core.nth.call(null, vec__5743, 1, null);
-  var pnod5741__$1 = enfocus.core.create_hidden_dom.call(null, pnod5741);
-  enfocus.core.i_at.call(null, id_sym5740, pnod5741__$1);
-  enfocus.core.reset_ids.call(null, id_sym5740, pnod5741__$1);
-  return enfocus.core.remove_node_return_child.call(null, pnod5741__$1);
+  var id_sym5833 = cljs.core.nth.call(null, vec__5836, 0, null);
+  var pnod5834 = cljs.core.nth.call(null, vec__5836, 1, null);
+  var pnod5834__$1 = enfocus.core.create_hidden_dom.call(null, pnod5834);
+  enfocus.core.i_at.call(null, id_sym5833, pnod5834__$1);
+  enfocus.core.reset_ids.call(null, id_sym5833, pnod5834__$1);
+  return enfocus.core.remove_node_return_child.call(null, pnod5834__$1);
 };
 enfocus.core.load_remote_dom.call(null, "/html/login.html", "remote/html/login.html", "en5581_");
 if (cljs.core.deref.call(null, enfocus.core.tpl_cache).call(null, "remote/html/login.html") == null) {
@@ -39905,15 +39905,15 @@ if (cljs.core.deref.call(null, enfocus.core.tpl_cache).call(null, "remote/html/l
 } else {
 }
 client.core.login_form = function login_form() {
-  var vec__5747 = function() {
+  var vec__5840 = function() {
     return enfocus.core.get_cached_snippet.call(null, "remote/html/login.html", ".form-horizontal");
   }.call(null);
-  var id_sym5744 = cljs.core.nth.call(null, vec__5747, 0, null);
-  var pnod5745 = cljs.core.nth.call(null, vec__5747, 1, null);
-  var pnod5745__$1 = enfocus.core.create_hidden_dom.call(null, pnod5745);
-  enfocus.core.i_at.call(null, id_sym5744, pnod5745__$1);
-  enfocus.core.reset_ids.call(null, id_sym5744, pnod5745__$1);
-  return enfocus.core.remove_node_return_child.call(null, pnod5745__$1);
+  var id_sym5837 = cljs.core.nth.call(null, vec__5840, 0, null);
+  var pnod5838 = cljs.core.nth.call(null, vec__5840, 1, null);
+  var pnod5838__$1 = enfocus.core.create_hidden_dom.call(null, pnod5838);
+  enfocus.core.i_at.call(null, id_sym5837, pnod5838__$1);
+  enfocus.core.reset_ids.call(null, id_sym5837, pnod5838__$1);
+  return enfocus.core.remove_node_return_child.call(null, pnod5838__$1);
 };
 enfocus.core.load_remote_dom.call(null, "/html/login.html", "remote/html/login.html", "en5581_");
 if (cljs.core.deref.call(null, enfocus.core.tpl_cache).call(null, "remote/html/login.html") == null) {
@@ -39921,15 +39921,15 @@ if (cljs.core.deref.call(null, enfocus.core.tpl_cache).call(null, "remote/html/l
 } else {
 }
 client.core.alert = function alert__$1() {
-  var vec__5751 = function() {
+  var vec__5844 = function() {
     return enfocus.core.get_cached_snippet.call(null, "remote/html/login.html", "#main-alert");
   }.call(null);
-  var id_sym5748 = cljs.core.nth.call(null, vec__5751, 0, null);
-  var pnod5749 = cljs.core.nth.call(null, vec__5751, 1, null);
-  var pnod5749__$1 = enfocus.core.create_hidden_dom.call(null, pnod5749);
-  enfocus.core.i_at.call(null, id_sym5748, pnod5749__$1);
-  enfocus.core.reset_ids.call(null, id_sym5748, pnod5749__$1);
-  return enfocus.core.remove_node_return_child.call(null, pnod5749__$1);
+  var id_sym5841 = cljs.core.nth.call(null, vec__5844, 0, null);
+  var pnod5842 = cljs.core.nth.call(null, vec__5844, 1, null);
+  var pnod5842__$1 = enfocus.core.create_hidden_dom.call(null, pnod5842);
+  enfocus.core.i_at.call(null, id_sym5841, pnod5842__$1);
+  enfocus.core.reset_ids.call(null, id_sym5841, pnod5842__$1);
+  return enfocus.core.remove_node_return_child.call(null, pnod5842__$1);
 };
 enfocus.core.load_remote_dom.call(null, "/html/schema.html", "remote/html/schema.html", "en5594_");
 if (cljs.core.deref.call(null, enfocus.core.tpl_cache).call(null, "remote/html/schema.html") == null) {
@@ -39937,15 +39937,15 @@ if (cljs.core.deref.call(null, enfocus.core.tpl_cache).call(null, "remote/html/s
 } else {
 }
 client.core.logged_navbar = function logged_navbar() {
-  var vec__5755 = function() {
+  var vec__5848 = function() {
     return enfocus.core.get_cached_snippet.call(null, "remote/html/schema.html", ".navbar");
   }.call(null);
-  var id_sym5752 = cljs.core.nth.call(null, vec__5755, 0, null);
-  var pnod5753 = cljs.core.nth.call(null, vec__5755, 1, null);
-  var pnod5753__$1 = enfocus.core.create_hidden_dom.call(null, pnod5753);
-  enfocus.core.i_at.call(null, id_sym5752, pnod5753__$1);
-  enfocus.core.reset_ids.call(null, id_sym5752, pnod5753__$1);
-  return enfocus.core.remove_node_return_child.call(null, pnod5753__$1);
+  var id_sym5845 = cljs.core.nth.call(null, vec__5848, 0, null);
+  var pnod5846 = cljs.core.nth.call(null, vec__5848, 1, null);
+  var pnod5846__$1 = enfocus.core.create_hidden_dom.call(null, pnod5846);
+  enfocus.core.i_at.call(null, id_sym5845, pnod5846__$1);
+  enfocus.core.reset_ids.call(null, id_sym5845, pnod5846__$1);
+  return enfocus.core.remove_node_return_child.call(null, pnod5846__$1);
 };
 enfocus.core.load_remote_dom.call(null, "/html/schema.html", "remote/html/schema.html", "en5594_");
 if (cljs.core.deref.call(null, enfocus.core.tpl_cache).call(null, "remote/html/schema.html") == null) {
@@ -39953,15 +39953,15 @@ if (cljs.core.deref.call(null, enfocus.core.tpl_cache).call(null, "remote/html/s
 } else {
 }
 client.core.schema_attribute_create_form = function schema_attribute_create_form() {
-  var vec__5759 = function() {
+  var vec__5852 = function() {
     return enfocus.core.get_cached_snippet.call(null, "remote/html/schema.html", "#schema-attribute-create");
   }.call(null);
-  var id_sym5756 = cljs.core.nth.call(null, vec__5759, 0, null);
-  var pnod5757 = cljs.core.nth.call(null, vec__5759, 1, null);
-  var pnod5757__$1 = enfocus.core.create_hidden_dom.call(null, pnod5757);
-  enfocus.core.i_at.call(null, id_sym5756, pnod5757__$1, "#schema-attribute-create", enfocus.core.set_style.call(null, new cljs.core.Keyword(null, "display", "display", 2685668404), "none"));
-  enfocus.core.reset_ids.call(null, id_sym5756, pnod5757__$1);
-  return enfocus.core.remove_node_return_child.call(null, pnod5757__$1);
+  var id_sym5849 = cljs.core.nth.call(null, vec__5852, 0, null);
+  var pnod5850 = cljs.core.nth.call(null, vec__5852, 1, null);
+  var pnod5850__$1 = enfocus.core.create_hidden_dom.call(null, pnod5850);
+  enfocus.core.i_at.call(null, id_sym5849, pnod5850__$1, "#schema-attribute-create", enfocus.core.set_style.call(null, new cljs.core.Keyword(null, "display", "display", 2685668404), "none"));
+  enfocus.core.reset_ids.call(null, id_sym5849, pnod5850__$1);
+  return enfocus.core.remove_node_return_child.call(null, pnod5850__$1);
 };
 enfocus.core.load_remote_dom.call(null, "/html/schema.html", "remote/html/schema.html", "en5594_");
 if (cljs.core.deref.call(null, enfocus.core.tpl_cache).call(null, "remote/html/schema.html") == null) {
@@ -39969,27 +39969,27 @@ if (cljs.core.deref.call(null, enfocus.core.tpl_cache).call(null, "remote/html/s
 } else {
 }
 client.core.schema_view = function schema_view() {
-  var vec__5763 = function() {
+  var vec__5856 = function() {
     return enfocus.core.get_cached_snippet.call(null, "remote/html/schema.html", "#schema-view");
   }.call(null);
-  var id_sym5760 = cljs.core.nth.call(null, vec__5763, 0, null);
-  var pnod5761 = cljs.core.nth.call(null, vec__5763, 1, null);
-  var pnod5761__$1 = enfocus.core.create_hidden_dom.call(null, pnod5761);
-  enfocus.core.i_at.call(null, id_sym5760, pnod5761__$1, "#add-new-attr-btn", enfocus.events.listen.call(null, new cljs.core.Keyword(null, "click", "click", 1108654330), client.core.show_schema_attribute_create_form));
-  enfocus.core.reset_ids.call(null, id_sym5760, pnod5761__$1);
-  return enfocus.core.remove_node_return_child.call(null, pnod5761__$1);
+  var id_sym5853 = cljs.core.nth.call(null, vec__5856, 0, null);
+  var pnod5854 = cljs.core.nth.call(null, vec__5856, 1, null);
+  var pnod5854__$1 = enfocus.core.create_hidden_dom.call(null, pnod5854);
+  enfocus.core.i_at.call(null, id_sym5853, pnod5854__$1, "#add-new-attr-btn", enfocus.events.listen.call(null, new cljs.core.Keyword(null, "click", "click", 1108654330), client.core.show_schema_attribute_create_form));
+  enfocus.core.reset_ids.call(null, id_sym5853, pnod5854__$1);
+  return enfocus.core.remove_node_return_child.call(null, pnod5854__$1);
 };
-client.core.error_handler = function error_handler(p__5764) {
-  var map__5766 = p__5764;
-  var map__5766__$1 = cljs.core.seq_QMARK_.call(null, map__5766) ? cljs.core.apply.call(null, cljs.core.hash_map, map__5766) : map__5766;
-  var status_text = cljs.core.get.call(null, map__5766__$1, new cljs.core.Keyword(null, "status-text", "status-text", 4371493274));
-  var status = cljs.core.get.call(null, map__5766__$1, new cljs.core.Keyword(null, "status", "status", 4416389988));
+client.core.error_handler = function error_handler(p__5857) {
+  var map__5859 = p__5857;
+  var map__5859__$1 = cljs.core.seq_QMARK_.call(null, map__5859) ? cljs.core.apply.call(null, cljs.core.hash_map, map__5859) : map__5859;
+  var status_text = cljs.core.get.call(null, map__5859__$1, new cljs.core.Keyword(null, "status-text", "status-text", 4371493274));
+  var status = cljs.core.get.call(null, map__5859__$1, new cljs.core.Keyword(null, "status", "status", 4416389988));
   return console.log([cljs.core.str("Something bad happened: "), cljs.core.str(status), cljs.core.str(" "), cljs.core.str(status_text)].join(""));
 };
-client.core.alert_error_handler = function alert_error_handler(p__5767) {
-  var map__5769 = p__5767;
-  var map__5769__$1 = cljs.core.seq_QMARK_.call(null, map__5769) ? cljs.core.apply.call(null, cljs.core.hash_map, map__5769) : map__5769;
-  var response = cljs.core.get.call(null, map__5769__$1, new cljs.core.Keyword(null, "response", "response", 673580979));
+client.core.alert_error_handler = function alert_error_handler(p__5860) {
+  var map__5862 = p__5860;
+  var map__5862__$1 = cljs.core.seq_QMARK_.call(null, map__5862) ? cljs.core.apply.call(null, cljs.core.hash_map, map__5862) : map__5862;
+  var response = cljs.core.get.call(null, map__5862__$1, new cljs.core.Keyword(null, "response", "response", 673580979));
   if (!client.utils.exists_QMARK_.call(null, "#main-alert")) {
     enfocus.core.at.call(null, ".navbar", enfocus.core.after.call(null, client.core.alert.call(null)));
   } else {
@@ -40050,8 +40050,8 @@ client.core.init_listeners_schema_attribute_create_form = function init_listener
 };
 client.core.fill_schema_attribute_create_form = function fill_schema_attribute_create_form() {
   enfocus.core.at.call(null, "#valueType", enfocus.core.content.call(null, ""));
-  return cljs.core.map.call(null, function(p1__5770_SHARP_) {
-    return enfocus.core.at.call(null, "#valueType", enfocus.core.append.call(null, [cljs.core.str("\x3coption value\x3d'"), cljs.core.str(p1__5770_SHARP_), cljs.core.str("'\x3e"), cljs.core.str(p1__5770_SHARP_), cljs.core.str("\x3c/option\x3e")].join("")));
+  return cljs.core.map.call(null, function(p1__5863_SHARP_) {
+    return enfocus.core.at.call(null, "#valueType", enfocus.core.append.call(null, [cljs.core.str("\x3coption value\x3d'"), cljs.core.str(p1__5863_SHARP_), cljs.core.str("'\x3e"), cljs.core.str(p1__5863_SHARP_), cljs.core.str("\x3c/option\x3e")].join("")));
   }, (new cljs.core.Keyword("db", "valueType", "db/valueType", 4543387286)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, client.core.new_attribute_params)));
 };
 client.core.schema_attribute_create_textarea_update = function schema_attribute_create_textarea_update() {
